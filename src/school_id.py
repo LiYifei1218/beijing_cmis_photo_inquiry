@@ -1,7 +1,7 @@
 import xlrd
 #f = open('school_id.dat', 'w')
 def get_data(filename,sheetnum):
-	dir_case = "data.xlsx"
+	dir_case = "data/data.xlsx"
 	data = xlrd.open_workbook(dir_case)
 	table = data.sheets()[sheetnum]
 	nor = table.nrows
