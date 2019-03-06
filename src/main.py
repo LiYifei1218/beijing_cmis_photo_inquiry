@@ -45,7 +45,7 @@ if int(eid) == -1:
             os.remove(name)
 else:
     img_url = "http://211.153.82.210/cmisfolder/photos/201200" + str(typ) + "/" + year + "/" + school + "/" + eid + ".jpg"
-    print(img_url)
+    #print(img_url)
     img = requests.get(img_url) 
     #print(sys.getsizeof(img))
     name = str(eid) + ".jpg"
