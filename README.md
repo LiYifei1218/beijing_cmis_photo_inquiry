@@ -1,4 +1,4 @@
 # beijing_cmis_photo_inquiry
 ---
-* Prerequisite: requests xlrd
-* Update: School keywords search
+* Prerequisites: requests xlrd
+* Update: School name keywords search
