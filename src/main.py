@@ -5,6 +5,8 @@ school_id = {}
 #school_id[input()]
 print("请输入毕业年级:")
 year = input()
+print("小学/初中/高中:1/2/3")
+typ = input()
 print("请输入学校代码,不确定请输入“-1”:")
 school = input()
 if school == "-1":
@@ -30,31 +32,28 @@ eid = input()
 print("Working...")
 if int(eid) == -1:
     for i in range(9000000, 9140000):
-        for j in range(0,11):
-            img_url = "http://211.153.82.210/cmisfolder/photos/2012" + str("%03d" % j) + "/" + str(year) + "/" + str(school) + "/" + str("%08d" % i) + ".jpg"
-            #print(img_url)
-            img = requests.get(img_url) 
-            #print(sys.getsizeof(img))
-            name = str("%05d" % i) + ".jpg"
-            f = open(name,'ab')
-            f.write(img.content)
-            f.close()
-
-            fsize = os.path.getsize(name)
-            if fsize < 500:
-                os.remove(name)
-else:
-    for j in range(0,11):
-        img_url = "http://211.153.82.210/cmisfolder/photos/2012" + str("%03d" % j) + "/" + year + "/" + school + "/" + eid + ".jpg"
+        img_url = "http://211.153.82.210/cmisfolder/photos/201200" + str(typ) + "/" + str(year) + "/" + str(school) + "/" + str("%08d" % i) + ".jpg"
         #print(img_url)
         img = requests.get(img_url) 
         #print(sys.getsizeof(img))
-        name = str(eid) + ".jpg"
+        name = str("%05d" % i) + ".jpg"
         f = open(name,'ab')
         f.write(img.content)
         f.close()
-
         fsize = os.path.getsize(name)
         if fsize < 500:
             os.remove(name)
+else:
+    img_url = "http://211.153.82.210/cmisfolder/photos/201200" + str(typ) + "/" + year + "/" + school + "/" + eid + ".jpg"
+    print(img_url)
+    img = requests.get(img_url) 
+    #print(sys.getsizeof(img))
+    name = str(eid) + ".jpg"
+    f = open(name,'ab')
+    f.write(img.content)
+    f.close()
+
+    fsize = os.path.getsize(name)
+    if fsize < 500:
+        os.remove(name)
 print("Done!")
