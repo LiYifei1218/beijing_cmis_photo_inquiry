@@ -1,2 +1,20 @@
 
 *.jpg
+src/.DS_Store
+src/__pycache__/main.cpython-37.pyc
+src/build/.DS_Store
+src/build/main/Analysis-00.toc
+src/build/main/base_library.zip
+src/build/main/BUNDLE-00.toc
+src/build/main/EXE-00.toc
+src/build/main/PKG-00.pkg
+src/build/main/PKG-00.toc
+src/build/main/PYZ-00.pyz
+src/build/main/PYZ-00.toc
+src/build/main/warn-main.txt
+src/build/main/xref-main.html
+src/dist/main
+src/dist/main.app/Contents/Info.plist
+src/dist/main.app/Contents/MacOS/main
+src/dist/main.app/Contents/Resources/icon-windowed.icns
+src/main.spec
