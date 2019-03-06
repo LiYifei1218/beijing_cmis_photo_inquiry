@@ -9,7 +9,7 @@ print("请输入学校代码,不确定请输入“-1”:")
 school = input()
 if school == "-1":
     print("请输入学校名称或关键字:")
-    f = open('school_id.dat', 'r')
+    f = open('data/school_id.dat', 'r')
     dictid = eval(f.read())
     temp = input()
     p = 0
